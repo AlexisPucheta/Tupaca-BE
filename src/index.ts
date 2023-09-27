@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import { dbConnection } from "./database";
-import router from './router'
+import tasksRouter from './routes/tasks.routes'
 
 const app = express();
 app.use(express.json());
@@ -12,7 +12,7 @@ app.get("/ping", (_req: Request, res: Response) => {
   res.send("pong");
 });
 
-app.use('/api/v1', router)
+app.use('/api/v1', tasksRouter)
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
