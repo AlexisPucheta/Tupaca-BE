@@ -1,6 +1,6 @@
-import { Schema, model, Document } from "mongoose";
-import { ITask } from "../interfaces/task";
-import { STATUS } from "../enums";
+import { Schema, model, Document } from 'mongoose';
+import { ITask } from '../interfaces/task';
+import { STATUS } from '../enums';
 
 const taskSchema = new Schema<ITask>(
   {
@@ -14,11 +14,11 @@ const taskSchema = new Schema<ITask>(
     },
     index: { type: Number, required: true },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 // Agregar un método toJSON personalizado para cambiar _id a id en la representación JSON
-taskSchema.set("toJSON", {
+taskSchema.set('toJSON', {
   transform: (_doc: Document, ret: any) => {
     ret.id = ret._id;
     delete ret._id;
@@ -26,4 +26,4 @@ taskSchema.set("toJSON", {
   },
 });
 
-export const Task = model<ITask>("Task", taskSchema);
+export const Task = model<ITask>('Task', taskSchema);

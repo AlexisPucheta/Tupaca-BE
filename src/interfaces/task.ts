@@ -1,8 +1,8 @@
-import { STATUS } from "../enums";
+import { STATUS } from '../enums';
 
 export interface ITask {
   title: string;
   description: string;
   status: STATUS;
-  index: number
+  index: number;
 }
