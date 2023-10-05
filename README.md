@@ -39,3 +39,9 @@ This project has been divided into two repositories: one for the client and this
 ### Server
 
 The server consists of routes for performing operations such as getAll, getById, update, delete, and create.
+
+
+### Deploy
+
+The server is deployed on render platform. 
+https://tupaca-fe.vercel.app/
