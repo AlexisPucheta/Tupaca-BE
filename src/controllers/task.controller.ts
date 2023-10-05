@@ -79,7 +79,7 @@ export const createTask = async (req: Request<unknown, unknown, CreateTaskType>,
       title,
       description,
       status,
-      index: newIndex, // Asigna el índice
+      index: newIndex,
     });
     const savedTask = await newTask.save();
     res.json(savedTask);
